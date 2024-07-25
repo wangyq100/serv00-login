@@ -71,9 +71,9 @@ async def main():
     for account in accounts:
         username = account['username']
         password = account['password']
-        panelnum = account['panelnum']
+        panel = account['panel']
 
-        is_logged_in = await login(username, password, panelnum)
+        is_logged_in = await login(username, password, panel)
 
         if is_logged_in:
             now_utc = format_to_iso(datetime.utcnow())
